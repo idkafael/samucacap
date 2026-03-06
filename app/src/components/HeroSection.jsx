@@ -29,7 +29,7 @@ export function HeroSection() {
                 </div>
               </div>
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[3.2rem] leading-[1.15] mb-5">
-                O evento que revela o processo que transformou uma{' '}
+                Descubra o segredo que transformou uma{' '}
                 <span className="gradient-text-gold font-extrabold">vidraçaria de 40m²</span>{' '}
                 em uma estrutura de mais de{' '}
                 <span className="gradient-text-gold font-extrabold">1000m²</span>
@@ -96,21 +96,12 @@ export function HeroSection() {
                 </div>
               </div>
               <h1 className="text-2xl sm:text-3xl md:text-4xl leading-[1.15] mb-5">
-                O evento que revela o processo que transformou uma{' '}
+                Descubra o segredo que transformou uma{' '}
                 <span className="gradient-text-gold font-extrabold">vidraçaria de 40m²</span>{' '}
                 em uma estrutura de mais de{' '}
                 <span className="gradient-text-gold font-extrabold">1000m²</span>
               </h1>
               <div className="text-muted text-sm md:text-base mb-8 leading-relaxed max-w-md mx-auto space-y-4 font-medium">
-                <p>Existe um tipo de vidraceiro que vive preso em um ciclo:</p>
-                <ul className="space-y-4 pl-0 list-none">
-                  {['trabalha o dia inteiro na obra', 'corre atrás de orçamento', 'negocia preço com cliente', 'resolve problema de equipe', 'e no final do mês… sobra pouco lucro.'].map((texto, index) => (
-                    <li key={texto} className="flex gap-4 items-start">
-                      <AnimatedNumberBadge number={index + 1} />
-                      <span className="pt-1">{texto}</span>
-                    </li>
-                  ))}
-                </ul>
                 <p>Esse é o <span className="text-white font-semibold">vidraceiro travado</span>.</p>
                 <p>
                   Mas existe outro tipo de profissional no mercado.
@@ -131,6 +122,17 @@ export function HeroSection() {
               </div>
             </div>
           </AnimatedCard>
+          <div className="text-muted text-sm md:text-base mt-8 leading-relaxed max-w-md mx-auto space-y-4 font-medium">
+            <p>Existe um tipo de vidraceiro que vive preso em um ciclo:</p>
+            <ul className="space-y-4 pl-0 list-none">
+              {['trabalha o dia inteiro na obra', 'corre atrás de orçamento', 'negocia preço com cliente', 'resolve problema de equipe', 'e no final do mês… sobra pouco lucro.'].map((texto, index) => (
+                <li key={texto} className="flex gap-4 items-start">
+                  <AnimatedNumberBadge number={index + 1} />
+                  <span className="pt-1">{texto}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-background to-transparent z-10" />
       </div>

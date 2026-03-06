@@ -1,14 +1,28 @@
 import { useState } from 'react'
 import { AnimatedCard } from './AnimatedCard'
 
+const TELEFONE_PATTERN = '^\\([0-9]{2}\\) [0-9]{4,5}-[0-9]{4}$'
+
+function formatTelefone(value) {
+  const digits = value.replace(/\D/g, '').slice(0, 11)
+  if (digits.length <= 2) return digits ? `(${digits}` : ''
+  if (digits.length <= 6) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`
+  return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`
+}
+
 export function OfertaSection() {
   const [nomeCompleto, setNomeCompleto] = useState('')
   const [telefone, setTelefone] = useState('')
+  const [email, setEmail] = useState('')
+
+  function handleTelefoneChange(e) {
+    setTelefone(formatTelefone(e.target.value))
+  }
 
   function handleSubmit(e) {
     e.preventDefault()
     // TODO: enviar para API ou integração
-    console.log({ nomeCompleto, telefone })
+    console.log({ nomeCompleto, telefone, email })
   }
 
   return (
@@ -44,6 +58,20 @@ export function OfertaSection() {
             />
           </div>
           <div>
+            <label htmlFor="email" className="block text-white text-sm font-medium mb-2">
+              E-mail
+            </label>
+            <input
+              id="email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              placeholder="seu@email.com"
+              className="w-full px-4 py-3 rounded-lg bg-background border border-surface-light text-white placeholder:text-muted focus:outline-none focus:border-gold/50 transition-colors"
+            />
+          </div>
+          <div>
             <label htmlFor="telefone" className="block text-white text-sm font-medium mb-2">
               Número de contato
             </label>
@@ -51,8 +79,10 @@ export function OfertaSection() {
               id="telefone"
               type="tel"
               value={telefone}
-              onChange={(e) => setTelefone(e.target.value)}
+              onChange={handleTelefoneChange}
               required
+              pattern={TELEFONE_PATTERN}
+              title="Use o formato (00) 00000-0000 ou (00) 0000-0000"
               placeholder="(00) 00000-0000"
               className="w-full px-4 py-3 rounded-lg bg-background border border-surface-light text-white placeholder:text-muted focus:outline-none focus:border-gold/50 transition-colors"
             />
