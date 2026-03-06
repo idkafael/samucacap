@@ -61,7 +61,7 @@ export function HeroSection() {
                   <LeadForm
                     idPrefix="hero-desktop"
                     onSubmit={(data) => console.log(data)}
-                    submitLabel="Quero participar gratuitamente"
+                    submitLabel="Participar gratuitamente"
                   />
                 </div>
                 <p className="text-muted text-[11px] md:text-xs uppercase tracking-wider">
@@ -103,15 +103,12 @@ export function HeroSection() {
                 em uma estrutura de mais de{' '}
                 <span className="gradient-text-gold font-extrabold">1000m²</span>
               </h1>
-              <div className="text-muted text-sm md:text-base mb-8 leading-relaxed max-w-md mx-auto space-y-4 font-medium">
-                <p>Esse é o <span className="text-white font-semibold">vidraceiro travado</span>.</p>
-              </div>
               <div className="flex flex-col gap-4 items-center w-full">
                 <div className="w-full max-w-sm">
                   <LeadForm
                     idPrefix="hero-mobile"
                     onSubmit={(data) => console.log(data)}
-                    submitLabel="Quero participar gratuitamente"
+                    submitLabel="Participar gratuitamente"
                   />
                 </div>
                 <p className="text-muted text-[11px] md:text-xs uppercase tracking-wider">
