@@ -34,7 +34,7 @@ export function LeadForm({ onSubmit, submitLabel = 'Quero participar do Evento E
           onChange={(e) => setEmail(e.target.value)}
           required
           placeholder="Digite seu melhor e-mail:"
-          className="w-full px-4 py-3 rounded-lg bg-background border border-surface-light text-white placeholder:text-muted focus:outline-none focus:border-gold/50 transition-colors"
+          className="w-full px-4 py-3 text-sm rounded-lg bg-background border border-surface-light text-white placeholder:text-muted focus:outline-none focus:border-gold/50 transition-colors"
         />
       </div>
       <div className="flex rounded-lg bg-background border border-surface-light overflow-hidden focus-within:border-gold/50 transition-colors">
@@ -56,7 +56,7 @@ export function LeadForm({ onSubmit, submitLabel = 'Quero participar do Evento E
           pattern={TELEFONE_PATTERN}
           title="Use o formato (00) 00000-0000 ou (00) 0000-0000"
           placeholder="WhatsApp com DDD - Ex: (11) 98765-1234"
-          className="flex-1 min-w-0 px-3 py-3 bg-transparent text-white placeholder:text-muted focus:outline-none"
+          className="flex-1 min-w-0 px-3 py-3 text-sm bg-transparent text-white placeholder:text-muted focus:outline-none"
         />
       </div>
       <button
