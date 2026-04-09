@@ -1,24 +1,29 @@
+import { SectionDivider } from './SectionDivider'
+
 export function Footer() {
   return (
-    <footer className="relative py-8 bg-background border-t border-surface-light/30 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <div>
-            <span className="text-sm font-bold tracking-wider">
-              <span className="text-white">ESQUADRIA</span>{' '}
-              <span className="gradient-text-gold">MILIONÁRIA</span>
-            </span>
-          </div>
-          <p className="text-muted text-xs text-center">© 2026 Sérgio Lima. Todos os direitos reservados.</p>
-          <div className="flex items-center gap-4">
-            <a href="#" className="text-muted text-xs hover:text-gold transition-colors">
-              Termos de Uso
-            </a>
-            <a href="#" className="text-muted text-xs hover:text-gold transition-colors">
-              Política de Privacidade
-            </a>
-          </div>
-        </div>
+    <footer className="relative z-[1] px-5 pb-10 pt-6 md:px-6">
+      <SectionDivider />
+      <div className="mx-auto max-w-6xl text-center">
+        <p className="font-body text-sm font-semibold tracking-wide text-white-cream sm:text-base">
+          GRUPO ALTA FREQUÊNCIA <span className="text-gold">⚡</span>
+        </p>
+
+        <nav className="mt-8 flex flex-wrap items-center justify-center gap-4 text-sm text-white2 md:gap-6">
+          <a href="#" className="font-body transition-colors hover:text-gold">
+            Termos de Uso
+          </a>
+          <span className="text-gold/30" aria-hidden>
+            |
+          </span>
+          <a href="#" className="font-body transition-colors hover:text-gold">
+            Política de Privacidade
+          </a>
+        </nav>
+
+        <p className="mt-8 font-body text-sm text-white2/80">
+          © 2025 Grupo Alta Frequência. Todos os direitos reservados.
+        </p>
       </div>
     </footer>
   )

@@ -1,57 +1,76 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0a0a0a;
-  --color-foreground: #fafafa;
-  --color-surface: #141414;
-  --color-surface-light: #1a1a1a;
-  --color-gold: #D4A520;
-  --color-gold-light: #F5D060;
-  --color-mustard: #EAA800;
-  --color-muted: #e0e0e0;
+  --color-gold: #c9a84c;
+  --color-gold-light: #e8c97a;
+  --color-gold-dark: #8a6a1e;
+  --color-black: #080808;
+  --color-dark: #111111;
+  --color-dark2: #141414;
+  --color-capture: #0e0e0e;
+  --color-white-cream: #f5f0e8;
+  --color-white2: #d9d0bc;
+  --color-error: #c97070;
+
+  --font-display: "Cormorant Garamond", serif;
+  --font-condensed: "Barlow Condensed", sans-serif;
+  --font-body: "Barlow", sans-serif;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes focus-ring-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 2px rgba(201, 168, 76, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.55);
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--color-black);
+    color: var(--color-white-cream);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  main {
+    color: var(--color-white-cream);
+  }
 }
 
 @layer utilities {
-  .gradient-text-gold {
-    background: linear-gradient(135deg, #D4A520 0%, #F5D060 50%, #EAA800 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .animate-marquee {
+    animation: marquee 32s linear infinite;
   }
-  .glow-gold {
-    box-shadow: 0 0 20px rgba(212, 165, 32, 0.3);
-  }
-  .glow-gold-sm {
-    box-shadow: 0 0 10px rgba(212, 165, 32, 0.2);
-  }
-  .animate-border-spin {
-    animation: border-spin 4s linear infinite;
-  }
-  .underline-gold {
-    display: inline-block;
-    padding-bottom: 4px;
-    border-bottom: 2px solid #D4A520;
-  }
-}
 
-@keyframes border-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+  .bg-grid-gold {
+    background-color: var(--color-black);
+    background-image:
+      linear-gradient(rgba(201, 168, 76, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201, 168, 76, 0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  background-color: #0a0a0a;
-  color: #fafafa;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-main {
-  color: #fafafa;
+  .input-gold-focus:focus {
+    animation: focus-ring-pulse 2s ease-in-out infinite;
+    outline: none;
+  }
 }
