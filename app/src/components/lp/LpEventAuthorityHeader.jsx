@@ -23,7 +23,7 @@ export function LpEventAuthorityHeader() {
         <div className="relative aspect-[3/4] max-h-[min(48dvh,360px)] w-full overflow-hidden sm:max-h-[min(52dvh,420px)] md:max-h-[min(62dvh,520px)]">
           <img
             src="/images/samuca.jpg"
-            alt="Samuel Souza — Alta Frequência"
+            alt="Samuel Souza, Alta Frequência"
             className="h-full w-full object-cover object-[center_8%] sm:object-[center_6%]"
             width={960}
             height={1280}

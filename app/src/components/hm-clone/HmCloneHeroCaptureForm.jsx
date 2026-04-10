@@ -53,9 +53,12 @@ function IconWhatsApp({ className }) {
 }
 
 /**
- * @param {{ onSubmitLead: (data: { email: string, whatsapp: string }) => Promise<{ ok?: boolean, error?: string }> }} props
+ * @param {{
+ *   onSubmitLead: (data: { email: string, whatsapp: string }) => Promise<{ ok?: boolean, error?: string }>,
+ *   submitLabel?: string,
+ * }} props
  */
-export function HmCloneHeroCaptureForm({ onSubmitLead }) {
+export function HmCloneHeroCaptureForm({ onSubmitLead, submitLabel = 'PARTICIPAR GRATUITAMENTE' }) {
   const [submitOk, setSubmitOk] = useState(false)
   const [submitError, setSubmitError] = useState('')
 
@@ -152,7 +155,7 @@ export function HmCloneHeroCaptureForm({ onSubmitLead }) {
             type="tel"
             inputMode="numeric"
             autoComplete="tel-national"
-            placeholder="WhatsApp com DDD — Ex: (11) 98765-4321"
+            placeholder="WhatsApp com DDD (Ex: (11) 98765-4321)"
             className="min-w-0 flex-1 border-0 bg-transparent px-2 py-3 text-sm text-[var(--hm-hero-text)] placeholder:text-[color-mix(in_srgb,var(--hm-hero-text)_45%,transparent)] outline-none focus:ring-0 sm:px-3 sm:text-base"
             {...whatsappRegister}
             onChange={(e) => {
@@ -170,7 +173,7 @@ export function HmCloneHeroCaptureForm({ onSubmitLead }) {
         type="submit"
         className="hm-clone-btn-cta flex w-full min-h-[3.25rem] cursor-pointer items-center justify-center rounded-[10px] px-7 py-3 text-center text-lg font-semibold leading-none tracking-tight text-white sm:min-h-[3.5rem] sm:px-10 sm:text-[22px]"
       >
-        PARTICIPAR GRATUITAMENTE
+        {submitLabel}
       </button>
     </form>
   )

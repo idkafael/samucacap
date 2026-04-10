@@ -200,7 +200,7 @@ export function CapturaForm({ onSubmitLead, embedded = false }) {
                     type="tel"
                     inputMode="numeric"
                     autoComplete="tel-national"
-                    placeholder="WhatsApp com DDD — Ex: (11) 98765-4321"
+                    placeholder="WhatsApp com DDD (Ex: (11) 98765-4321)"
                     className={`input-gold-focus min-w-0 flex-1 border-0 bg-transparent px-2 font-body text-sm text-white-cream placeholder:text-white2/45 focus:ring-0 sm:px-3 sm:text-base ${inputPy}`}
                     {...whatsappRegister}
                     onChange={(e) => {

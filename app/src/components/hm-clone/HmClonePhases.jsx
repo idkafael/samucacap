@@ -46,7 +46,7 @@ export function HmClonePhases() {
               personalizado
             </h2>
             <p className="hm-clone-phases-copy mt-5 text-[0.95rem] leading-relaxed sm:mt-6 sm:text-[1.05rem]">
-              Antes do programa, você passa por uma entrevista de aplicação e geramos o seu Radar de 9 Pontos — análise
+              Antes do programa, você passa por uma entrevista de aplicação e geramos o seu Radar de 9 Pontos. Uma análise
               visual do seu momento atual nas três dimensões da tríade. É o mapa que define sua jornada de edificação.
             </p>
           </PhaseBlock>
@@ -59,7 +59,7 @@ export function HmClonePhases() {
             <div className="hm-clone-phases-media-frame mt-6 overflow-hidden rounded-2xl border shadow-lg shadow-black/50 sm:rounded-[1.25rem]">
               <img
                 src={IMG_FASE_TRILHA}
-                alt="Trilha online — aulas preparatórias"
+                alt="Trilha online (aulas preparatórias)"
                 width={800}
                 height={500}
                 loading="lazy"
@@ -97,7 +97,7 @@ export function HmClonePhases() {
             </h3>
             <p className="hm-clone-phases-copy mt-5 text-[0.95rem] leading-relaxed sm:mt-6 sm:text-[1.05rem]">
               Três dias em Alphaville com um grupo seleto de pares e mentores que já navegaram os mesmos desafios. Não é
-              palestra — é onde decisões reais são tomadas e direções de vida são edificadas.
+              palestra. É onde decisões reais são tomadas e direções de vida são edificadas.
             </p>
             <p className="hm-clone-phases-meta mt-8 text-[11px] font-bold uppercase tracking-[0.22em] sm:mt-10 sm:text-xs">
               21, 22 E 23 · MAIO 2026 · ALPHAVILLE, SP

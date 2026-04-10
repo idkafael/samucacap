@@ -11,7 +11,7 @@ export function Hero({ onSubmitLead }) {
       <div className="relative h-[min(68svh,34rem)] w-full shrink-0 sm:h-[min(64svh,38rem)] md:h-[min(62svh,40rem)]">
         <img
           src="/images/samuca.jpg"
-          alt="Samuel Souza — mentor do Grupo Alta Frequência"
+          alt="Samuel Souza, mentor do Grupo Alta Frequência"
           className="absolute inset-0 h-full w-full object-cover object-[center_8%] sm:object-[center_6%]"
           width={960}
           height={1280}

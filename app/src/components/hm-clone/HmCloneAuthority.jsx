@@ -1,7 +1,7 @@
 import { HmCloneWaveDivider } from './HmCloneWaveDivider'
 
-/** @param {{ onScrollToCapture: () => void }} props */
-export function HmCloneAuthority({ onScrollToCapture }) {
+/** @param {{ onScrollToCapture: () => void; showCta?: boolean }} props */
+export function HmCloneAuthority({ onScrollToCapture, showCta = true }) {
   return (
     <section className="bg-[#020202]">
       <HmCloneWaveDivider />
@@ -39,16 +39,18 @@ export function HmCloneAuthority({ onScrollToCapture }) {
           Nesse encontro você terá o Samuel frente a frente e poderá tirar dúvidas diretamente com ele.
         </h3>
 
-        <div className="mt-10 flex justify-center sm:mt-12">
-          <button
-            type="button"
-            onClick={onScrollToCapture}
-            className="hm-clone-btn-cta inline-flex min-h-[3.25rem] cursor-pointer items-center justify-center rounded-[10px] px-6 py-3 text-center text-base font-semibold leading-none tracking-tight text-white sm:min-h-[3.5rem] sm:px-9 sm:text-lg md:text-[22px]"
-            aria-label="Ir para o formulário de inscrição no topo da página"
-          >
-            QUERO PARTICIPAR DO ENCONTRO
-          </button>
-        </div>
+        {showCta ? (
+          <div className="mt-10 flex justify-center sm:mt-12">
+            <button
+              type="button"
+              onClick={onScrollToCapture}
+              className="hm-clone-btn-cta inline-flex min-h-[3.25rem] cursor-pointer items-center justify-center rounded-[10px] px-6 py-3 text-center text-base font-semibold leading-none tracking-tight text-white sm:min-h-[3.5rem] sm:px-9 sm:text-lg md:text-[22px]"
+              aria-label="Ir para o formulário de inscrição no topo da página"
+            >
+              QUERO PARTICIPAR DO ENCONTRO
+            </button>
+          </div>
+        ) : null}
       </div>
       <HmCloneWaveDivider flip />
     </section>

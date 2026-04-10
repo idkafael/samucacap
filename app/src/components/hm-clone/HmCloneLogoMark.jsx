@@ -1,5 +1,5 @@
 /** Marca textual + ícone (sem PNG externo), alinhado ao layout da referência. */
-export function HmCloneLogoMark() {
+export function HmCloneLogoMark({ hideText = false }) {
   return (
     <div className="flex max-w-md items-center gap-3 sm:gap-4">
       <div
@@ -28,15 +28,19 @@ export function HmCloneLogoMark() {
           </defs>
         </svg>
       </div>
-      <div className="min-w-0 leading-tight">
-        <p className="text-[0.65rem] font-bold uppercase tracking-[0.14em] text-[var(--hm-hero-heading,#fafaf9)] sm:text-xs">
-          ACELERAÇÃO
-        </p>
-        <p className="text-lg font-bold tracking-tight text-[var(--hm-hero-heading,#fafaf9)] sm:text-[1.35rem]">HIGH TICKET</p>
-        <p className="text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-[color-mix(in_srgb,var(--hm-hero-heading)_82%,transparent)] sm:text-[0.7rem]">
-          NO PERPÉTUO
-        </p>
-      </div>
+      {hideText ? null : (
+        <div className="min-w-0 leading-tight">
+          <p className="text-[0.65rem] font-bold uppercase tracking-[0.14em] text-[var(--hm-hero-heading,#fafaf9)] sm:text-xs">
+            ACELERAÇÃO
+          </p>
+          <p className="text-lg font-bold tracking-tight text-[var(--hm-hero-heading,#fafaf9)] sm:text-[1.35rem]">
+            HIGH TICKET
+          </p>
+          <p className="text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-[color-mix(in_srgb,var(--hm-hero-heading)_82%,transparent)] sm:text-[0.7rem]">
+            NO PERPÉTUO
+          </p>
+        </div>
+      )}
     </div>
   )
 }

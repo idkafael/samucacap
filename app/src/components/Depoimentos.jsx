@@ -85,7 +85,7 @@ function VideoDepoimentoCard({ item, isActive }) {
             playsInline
             preload="metadata"
             muted
-            aria-label={`Depoimento em vídeo — ${item.name}`}
+            aria-label={`Depoimento em vídeo, ${item.name}`}
           />
         ) : (
           <div className="flex h-full min-h-[200px] w-full flex-col items-center justify-center gap-4 bg-gradient-to-b from-dark to-black px-4 text-center">
