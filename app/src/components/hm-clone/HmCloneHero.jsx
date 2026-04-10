@@ -69,13 +69,13 @@ export function HmCloneHero({
       <div className="hm-hero-content-wrap relative z-10 w-full">
         <div
           className={`mx-auto flex w-full max-w-7xl flex-col px-4 pb-14 pt-2 sm:px-6 sm:pb-16 sm:pt-3 lg:min-h-[min(100svh,56rem)] lg:px-10 lg:pb-20 lg:pt-14 ${
-            centerCard ? 'items-center' : 'lg:flex-row lg:items-start'
+            centerCard ? 'items-center lg:items-start' : 'lg:flex-row lg:items-start'
           }`}
         >
         <div
           className={`mx-auto w-full max-w-xl ${
             highlightCard ? 'hm-cafe-hero-card px-5 py-7 sm:px-8 sm:py-9' : ''
-          } ${centerCard ? '' : 'lg:mx-0'}`}
+          } lg:mx-0`}
         >
           {hideLogo ? null : (
             <div className="mb-1.5 flex w-full justify-center lg:mb-5 lg:justify-start">
