@@ -5,7 +5,7 @@ import EventLpPage from './pages/EventLpPage'
 export default function App() {
   return (
     <Routes>
-      {/* LP principal (clone) — mesma experiência na raiz e em /lp */}
+      {/* LP clone: `/` com audiência; `/lp` com #lp-fases e sem audiência */}
       <Route path="/" element={<EventLpPage />} />
       <Route path="/lp" element={<EventLpPage />} />
       {/* Home antiga Grupo Alta Frequência + captura “Lives diárias” */}

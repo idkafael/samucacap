@@ -1,7 +1,110 @@
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@400;600;700&display=swap");
 
+/**
+ * Seção #lp-fases — paleta tirada do próprio bloco (ouro + preto + texto creme).
+ * Títulos serif alinhados ao tom do hero (--hm-hero-heading / --hm-hero-copy).
+ */
+.hm-clone-phases {
+  --hm-phases-bg: #030303;
+  --hm-phases-gold: #c5a059;
+  --hm-phases-gold-soft: #a88442;
+  --hm-phases-line: color-mix(in srgb, var(--hm-phases-gold) 88%, transparent);
+  --hm-phases-heading: #fafaf9;
+  --hm-phases-body: #ddd7cc;
+  --hm-phases-text: #f5f5f4;
+  --hm-phases-border-media: color-mix(in srgb, var(--hm-phases-gold) 22%, transparent);
+  --hm-phases-radar-ring: color-mix(in srgb, var(--hm-phases-gold) 38%, transparent);
+  --hm-phases-radar-axis: color-mix(in srgb, var(--hm-phases-gold) 48%, transparent);
+  --hm-phases-radar-dot-ring: rgb(10 8 6 / 0.92);
+  background-color: var(--hm-phases-bg);
+}
+
+.hm-clone-phases .hm-clone-phases-title {
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  color: var(--hm-phases-heading);
+}
+
+.hm-clone-phases .hm-clone-phases-kicker {
+  color: var(--hm-phases-gold);
+}
+
+.hm-clone-phases .hm-clone-phases-copy {
+  color: var(--hm-phases-body);
+}
+
+.hm-clone-phases .hm-clone-phases-meta {
+  color: var(--hm-phases-gold);
+}
+
+.hm-clone-phases .hm-clone-phases-timeline-line {
+  background-color: var(--hm-phases-line);
+}
+
+.hm-clone-phases .hm-clone-phases-timeline-node {
+  border-color: var(--hm-phases-gold);
+  background-color: var(--hm-phases-bg);
+}
+
+.hm-clone-phases .hm-clone-phases-media-frame {
+  border-color: var(--hm-phases-border-media);
+}
+
+/**
+ * Audiência — parallelogram cards (ref. Henrique Marinho / `.aba-steps__item` no Elementor).
+ * clip-path + gradiente 135° branco → cinza; número absoluto em #fa3e00.
+ */
+.hm-clone-audience-card {
+  position: relative;
+  clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #d1d5db 100%);
+  padding: 30px 24px 26px 80px;
+}
+
+@media (min-width: 640px) {
+  .hm-clone-audience-card {
+    padding: 50px 40px 45px 170px;
+  }
+}
+
+.hm-clone-audience-card-num {
+  position: absolute;
+  left: 18px;
+  top: 10px;
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fa3e00;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (min-width: 640px) {
+  .hm-clone-audience-card-num {
+    left: 40px;
+    top: 12px;
+    font-size: 90px;
+    line-height: 90px;
+  }
+}
+
+.hm-clone-audience-card-text {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #333333;
+}
+
+@media (min-width: 640px) {
+  .hm-clone-audience-card-text {
+    font-size: 1.1875rem; /* ~19px */
+    line-height: 1.5;
+  }
+}
+
 .hm-clone-root {
   font-family: "Encode Sans Semi Expanded", ui-sans-serif, system-ui, sans-serif;
+  /* CTAs fora de .hm-hero-section ainda usam o mesmo gradiente */
+  --hm-hero-blue-deep: #0788e6;
+  --hm-hero-blue-soft: #5ac8ff;
 }
 
 /**
@@ -50,14 +153,51 @@
   background: var(--hm-hero-input-bg-prefix);
 }
 
-.hm-hero-section .hm-hero-btn-cta {
+/**
+ * CTA azul — brilho externo + reflexo interno (próximo ao Elementor / LP original).
+ */
+.hm-clone-root .hm-clone-btn-cta {
+  position: relative;
   background: linear-gradient(135deg, var(--hm-hero-blue-deep) 0%, var(--hm-hero-blue-soft) 100%);
+  box-shadow:
+    0 4px 22px rgb(7 136 230 / 0.48),
+    0 0 0 1px rgb(255 255 255 / 0.14) inset,
+    inset 0 1px 0 rgb(255 255 255 / 0.32);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.3s ease,
+    filter 0.22s ease;
 }
 
-.hm-hero-section .hm-hero-btn-cta:hover {
-  filter: brightness(1.06);
+.hm-clone-root .hm-clone-btn-cta:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.08) saturate(1.06);
+  box-shadow:
+    0 10px 36px rgb(30 176 255 / 0.58),
+    0 0 52px rgb(90 200 255 / 0.38),
+    0 0 0 1px rgb(255 255 255 / 0.22) inset,
+    inset 0 1px 0 rgb(255 255 255 / 0.42);
 }
 
-.hm-hero-section .hm-hero-btn-cta:active {
-  filter: brightness(0.96);
+.hm-clone-root .hm-clone-btn-cta:active {
+  transform: translateY(0) scale(0.99);
+  filter: brightness(0.94);
+  box-shadow:
+    0 2px 14px rgb(7 136 230 / 0.42),
+    inset 0 2px 8px rgb(0 0 0 / 0.18),
+    inset 0 1px 0 rgb(255 255 255 / 0.18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hm-clone-root .hm-clone-btn-cta {
+    transition: box-shadow 0.2s ease, filter 0.2s ease;
+  }
+
+  .hm-clone-root .hm-clone-btn-cta:hover {
+    transform: none;
+  }
+
+  .hm-clone-root .hm-clone-btn-cta:active {
+    transform: none;
+  }
 }

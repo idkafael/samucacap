@@ -70,7 +70,9 @@ export function HmCloneHero({ onSubmitLead }) {
             ))}
           </ul>
 
-          <HmCloneHeroCaptureForm onSubmitLead={onSubmitLead} />
+          <div id="lp-hero-captura" className="scroll-mt-4">
+            <HmCloneHeroCaptureForm onSubmitLead={onSubmitLead} />
+          </div>
 
           <div className="mt-4 flex items-start justify-center gap-2 text-left sm:mt-5 lg:justify-start">
             <IconCalendar className="mt-0.5 h-5 w-5 shrink-0 text-[var(--hm-hero-blue)]" aria-hidden />
