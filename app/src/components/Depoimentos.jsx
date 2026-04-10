@@ -162,11 +162,8 @@ export function Depoimentos() {
           className="text-center"
         >
           <h2 className="font-display text-[clamp(1.75rem,4vw,3rem)] font-light text-white-cream">
-            Cases em vídeo
+            Quem já participou sabe
           </h2>
-          <p className="mt-4 font-body text-base text-white2 md:text-lg">
-            Um vídeo por vez — passe para o lado para ver o próximo depoimento
-          </p>
         </motion.div>
 
         <motion.div
