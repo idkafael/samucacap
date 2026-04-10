@@ -11,7 +11,7 @@ import { Footer } from '../components/Footer'
 /** Convite ao evento — rota `/lp` (sem captura) + prova social em vídeo. */
 export default function EventLpPage() {
   return (
-    <main className="relative min-h-screen overflow-x-hidden pt-[4.5rem] sm:pt-[5.25rem] md:pt-24">
+    <main className="relative min-h-screen overflow-x-hidden pt-[3.35rem] sm:pt-[3.65rem] md:pt-16">
       <PageBackground />
       <LpBonusCountdownHeader />
       <LpEventAuthorityHeader />

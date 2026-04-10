@@ -12,7 +12,7 @@ export function LpBonusPropositoSection() {
   return (
     <section
       id="bonus-proposito"
-      className="scroll-mt-[5.5rem] md:scroll-mt-28 relative z-[1] px-5 py-10 md:px-6 md:py-14"
+      className="scroll-mt-[3.75rem] sm:scroll-mt-[4rem] md:scroll-mt-20 relative z-[1] px-5 py-10 md:px-6 md:py-14"
     >
       <div className="mx-auto max-w-6xl">
         <SectionDivider />
