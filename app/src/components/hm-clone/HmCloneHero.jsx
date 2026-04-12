@@ -1,9 +1,10 @@
 import { HmCloneHeroCaptureForm } from './HmCloneHeroCaptureForm'
 import { HmCloneLogoMark } from './HmCloneLogoMark'
 import { IconCheckCircle } from './IconCheckCircle'
+import { CafeIcon } from './CafeIcon'
 
 const HERO_BG = 'https://i.imgur.com/UACNYcH.jpg'
-const HERO_BG_MOBILE = 'https://i.imgur.com/nW4ciZm.jpg'
+const HERO_BG_MOBILE = 'https://i.imgur.com/ozxfscC.jpg'
 
 const BULLETS = [
   'Funis de CAC zero',
@@ -47,6 +48,9 @@ export function HmCloneHero({
         aria-hidden
       />
       <div className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-black via-black/70 to-transparent lg:block lg:via-black/45 xl:via-black/28" />
+
+      {/* Watermark decorativo — xícara vetorizada (desktop only, tem foto no mobile) */}
+      <CafeIcon className="hm-wm hm-wm--br hidden lg:block" />
 
       {/* Mobile: topo da imagem alinhado ao topo do site; cover corta de baixo, não da cabeça */}
       <div className="relative z-0 h-[min(48vh,420px)] w-full overflow-hidden sm:h-[min(44vh,380px)] lg:hidden">
