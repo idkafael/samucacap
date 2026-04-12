@@ -2,8 +2,8 @@ import { HmCloneHeroCaptureForm } from './HmCloneHeroCaptureForm'
 import { HmCloneLogoMark } from './HmCloneLogoMark'
 import { IconCheckCircle } from './IconCheckCircle'
 
-const HERO_BG = 'https://i.imgur.com/nW4ciZm.jpg'
-const HERO_BG_MOBILE = HERO_BG
+const HERO_BG = 'https://i.imgur.com/UACNYcH.jpg'
+const HERO_BG_MOBILE = 'https://i.imgur.com/nW4ciZm.jpg'
 
 const BULLETS = [
   'Funis de CAC zero',
@@ -49,11 +49,14 @@ export function HmCloneHero({
     <section className="hm-hero-section relative isolate overflow-hidden lg:min-h-[min(100svh,56rem)]">
       {/* Desktop: fundo em tela cheia + gradiente lateral */}
       <div
-        className="pointer-events-none absolute inset-0 hidden bg-cover bg-[position:72%_center] bg-no-repeat lg:block"
-        style={{ backgroundImage: `url(${HERO_BG})` }}
+        className="pointer-events-none absolute inset-0 hidden bg-cover bg-no-repeat lg:block"
+        style={{
+          backgroundImage: `url(${HERO_BG})`,
+          backgroundPosition: '58% 18%',
+        }}
         aria-hidden
       />
-      <div className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-black via-black/80 to-transparent lg:block lg:via-black/55 xl:via-black/35" />
+      <div className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-black via-black/70 to-transparent lg:block lg:via-black/45 xl:via-black/28" />
 
       {/* Mobile: topo da imagem alinhado ao topo do site; cover corta de baixo, não da cabeça */}
       <div className="relative z-0 h-[min(44vh,400px)] w-full overflow-hidden sm:h-[min(40vh,340px)] lg:hidden">
@@ -68,8 +71,8 @@ export function HmCloneHero({
 
       <div className="hm-hero-content-wrap relative z-10 w-full -mt-[50px] lg:mt-0">
         <div
-          className={`mx-auto flex w-full max-w-7xl flex-col px-4 pb-14 pt-0 sm:px-6 sm:pb-16 sm:pt-0 lg:min-h-[min(100svh,56rem)] lg:px-10 lg:pb-20 lg:pt-14 ${
-            centerCard ? 'items-center lg:items-start' : 'lg:flex-row lg:items-start'
+          className={`mx-auto flex w-full max-w-7xl flex-col px-4 pb-14 pt-0 sm:px-6 sm:pb-16 sm:pt-0 lg:min-h-[min(100svh,56rem)] lg:px-10 lg:pb-16 lg:pt-10 ${
+            centerCard ? 'items-center lg:items-center' : 'lg:flex-row lg:items-center'
           }`}
         >
         <div
