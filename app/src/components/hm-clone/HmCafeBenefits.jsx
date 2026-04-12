@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { CafeIcon } from './CafeIcon'
 
 const ITEMS = [
   'Você para de viver em conflito entre trabalho e família',
@@ -28,7 +29,8 @@ const itemVariants = {
 
 export function HmCafeBenefits() {
   return (
-    <section className="hm-cafe-benefits bg-[#020202] px-5 pb-20 pt-2 sm:px-6 sm:pb-28 sm:pt-4">
+    <section className="hm-cafe-benefits relative bg-[#020202] px-5 pb-20 pt-2 sm:px-6 sm:pb-28 sm:pt-4 overflow-hidden">
+      <CafeIcon className="hm-wm hm-wm--tr" />
       <div className="mx-auto max-w-xl sm:max-w-2xl">
 
         {/* Kicker */}

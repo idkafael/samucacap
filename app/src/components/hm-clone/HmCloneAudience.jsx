@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { CafeIcon } from './CafeIcon'
 
 const TRIES = [
   'Tenta organizar a vida.',
@@ -27,7 +28,8 @@ const fadeUp = {
 /** @param {{ onScrollToCapture: () => void; showCta?: boolean }} props */
 export function HmCloneAudience({ onScrollToCapture, showCta = true }) {
   return (
-    <section className="hm-clone-audience bg-[#020202] px-5 pb-20 pt-14 sm:px-6 sm:pb-24 sm:pt-16 md:pb-28">
+    <section className="hm-clone-audience relative bg-[#020202] px-5 pb-20 pt-14 sm:px-6 sm:pb-24 sm:pt-16 md:pb-28 overflow-hidden">
+      <CafeIcon className="hm-wm hm-wm--br" />
       <div className="mx-auto max-w-xl sm:max-w-2xl">
 
         <motion.p

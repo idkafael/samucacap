@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { CafeIcon } from './CafeIcon'
 
 const ITEMS = [
   'Clareza sobre o que realmente importa',
@@ -22,8 +23,9 @@ export function HmCafeAbout() {
   return (
     <section
       id="hm-cafe-about"
-      className="hm-cafe-about bg-[#020202] px-5 pb-20 pt-2 sm:px-6 sm:pb-24 sm:pt-4 md:pb-28"
+      className="hm-cafe-about relative bg-[#020202] px-5 pb-20 pt-2 sm:px-6 sm:pb-24 sm:pt-4 md:pb-28 overflow-hidden"
     >
+      <CafeIcon className="hm-wm hm-wm--bl" />
       <div className="mx-auto max-w-xl sm:max-w-2xl">
 
         <p className="hm-section-kicker">O PROGRAMA</p>

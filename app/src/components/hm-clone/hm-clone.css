@@ -1,6 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@400;600;700&display=swap");
 
 /* ═══════════════════════════════════════
+   WATERMARK XÍCARA — sistema de classes responsivo
+   Mobile: ícone totalmente dentro da seção, visível
+   Desktop: pode vazar levemente pela borda
+═══════════════════════════════════════ */
+.hm-wm {
+  pointer-events: none;
+  position: absolute;
+  opacity: 0.13;
+  width: 155px;
+  mix-blend-mode: screen;
+  user-select: none;
+}
+
+/* Posições base (mobile-first) */
+.hm-wm--tr    { top: 5%;    right: 12px;  transform: rotate(12deg); }
+.hm-wm--br    { bottom: 5%; right: 12px;  transform: rotate(-18deg); }
+.hm-wm--tl    { top: 5%;    left: 12px;   transform: rotate(-12deg) scaleX(-1); }
+.hm-wm--bl    { bottom: 5%; left: 12px;   transform: rotate(18deg) scaleX(-1); }
+.hm-wm--mid-r { top: 42%;   right: 12px;  transform: translateY(-50%) rotate(8deg); }
+.hm-wm--mid-l { top: 42%;   left: 12px;   transform: translateY(-50%) rotate(-8deg) scaleX(-1); }
+.hm-wm--center {
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) rotate(-5deg);
+  width: 120px;
+}
+
+/* Desktop: maiores */
+@media (min-width: 1024px) {
+  .hm-wm           { width: 250px; }
+  .hm-wm--tr       { right: -24px;  transform: rotate(12deg); }
+  .hm-wm--br       { right: -24px;  transform: rotate(-18deg); }
+  .hm-wm--tl       { left: -24px;   transform: rotate(-12deg) scaleX(-1); }
+  .hm-wm--bl       { left: -24px;   transform: rotate(18deg) scaleX(-1); }
+  .hm-wm--mid-r    { right: -24px;  transform: translateY(-50%) rotate(8deg); }
+  .hm-wm--mid-l    { left: -24px;   transform: translateY(-50%) rotate(-8deg) scaleX(-1); }
+  .hm-wm--center   { width: 160px; }
+}
+
+/* ═══════════════════════════════════════
    ROOT & HERO TOKENS
 ═══════════════════════════════════════ */
 .hm-clone-root {
