@@ -1,6 +1,14 @@
 import { motion } from 'framer-motion'
 import { HmCloneWaveDivider } from './HmCloneWaveDivider'
 
+/** Ordem: esq. cima → esq. baixo → dir. cima → dir. baixo */
+const AUTHORITY_COLLAGE_SRC = [
+  '/images/icon.jpg',
+  'https://i.imgur.com/jXIljsi.jpg',
+  'https://i.imgur.com/NdEW5op.jpg',
+  'https://i.imgur.com/ALOQJlA.jpg',
+]
+
 const inView = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
@@ -16,20 +24,57 @@ export function HmCloneAuthority({ onScrollToCapture, showCta = true }) {
 
       <div className="mx-auto max-w-3xl px-4 pb-12 pt-4 sm:px-6 sm:pb-16 md:pb-20 md:pt-6">
 
-        {/* Foto */}
+        {/* Galeria */}
         <motion.div
-          className="hm-authority-photo-wrap mx-auto mb-10 sm:mb-12"
+          className="hm-authority-collage-wrap mx-auto mb-10 sm:mb-12"
           {...inView(0)}
         >
-          <img
-            src="/images/icon.jpg"
-            alt="Samuel Souza"
-            width={800}
-            height={1000}
-            loading="lazy"
-            decoding="async"
-            className="hm-authority-photo"
-          />
+          <div
+            className="hm-authority-collage"
+            role="group"
+            aria-label="Fotos de Samuel Souza"
+          >
+            <div className="hm-authority-collage-col">
+              <div className="hm-authority-collage-slot aspect-[4/3] shrink-0">
+                <img
+                  src={AUTHORITY_COLLAGE_SRC[0]}
+                  alt=""
+                  className="hm-authority-collage-img"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div className="hm-authority-collage-slot aspect-[4/3] shrink-0">
+                <img
+                  src={AUTHORITY_COLLAGE_SRC[1]}
+                  alt=""
+                  className="hm-authority-collage-img"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+            <div className="hm-authority-collage-col">
+              <div className="hm-authority-collage-slot aspect-[5/3] shrink-0">
+                <img
+                  src={AUTHORITY_COLLAGE_SRC[2]}
+                  alt=""
+                  className="hm-authority-collage-img"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div className="hm-authority-collage-slot hm-authority-collage-slot--tall min-h-0 flex-1">
+                <img
+                  src={AUTHORITY_COLLAGE_SRC[3]}
+                  alt=""
+                  className="hm-authority-collage-img"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </div>
         </motion.div>
 
         {/* Kicker */}

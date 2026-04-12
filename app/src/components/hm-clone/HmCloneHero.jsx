@@ -2,8 +2,8 @@ import { HmCloneHeroCaptureForm } from './HmCloneHeroCaptureForm'
 import { HmCloneLogoMark } from './HmCloneLogoMark'
 import { IconCheckCircle } from './IconCheckCircle'
 
-const HERO_BG = 'https://i.imgur.com/stLK6HN.jpg'
-const HERO_BG_MOBILE = 'https://i.imgur.com/stLK6HN.jpg'
+const HERO_BG = '/images/aceleracao-hero-desktop.png'
+const HERO_BG_MOBILE = '/images/mobile.png'
 
 const BULLETS = [
   'Funis de CAC zero',
