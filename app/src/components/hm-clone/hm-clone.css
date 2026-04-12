@@ -631,6 +631,16 @@
   object-fit: cover;
 }
 
+/* Slots que precisam priorizar rostos — ancora pelo topo do arquivo no cover */
+.hm-authority-collage-img--focus-upper {
+  object-position: center top;
+}
+
+/* NdEW5op (5/3) — leve deslocamento para mostrar mais corpo sem perder o rosto */
+.hm-authority-collage-img--focus-fullbody {
+  object-position: center 26%;
+}
+
 .hm-authority-collage-slot--tall {
   flex: 1 1 0;
   min-height: 5.5rem;

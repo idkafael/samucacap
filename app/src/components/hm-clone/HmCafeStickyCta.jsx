@@ -41,7 +41,7 @@ export function HmCafeStickyCta({ onClick }) {
   if (!visible) return null
 
   return (
-    <div className="hm-cafe-sticky-cta pointer-events-none fixed inset-x-0 bottom-0 z-50 px-4 pb-4 sm:px-6 sm:pb-5">
+    <div className="hm-cafe-sticky-cta pointer-events-none fixed inset-x-0 bottom-0 z-50 px-4 pb-3 sm:px-6 sm:pb-4">
       <div className="pointer-events-auto mx-auto w-full max-w-xl">
         <div className="hm-sticky-cta-shell">
           <button

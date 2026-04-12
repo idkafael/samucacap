@@ -22,7 +22,11 @@ export function HmCloneAuthority({ onScrollToCapture, showCta = true }) {
     <section className="bg-[#020202]">
       <HmCloneWaveDivider />
 
-      <div className="mx-auto max-w-3xl px-4 pb-12 pt-4 sm:px-6 sm:pb-16 md:pb-20 md:pt-6">
+      <div
+        className={`mx-auto max-w-3xl px-4 pt-4 sm:px-6 md:pt-6 ${
+          showCta ? 'pb-6 sm:pb-7 md:pb-8' : 'pb-3 sm:pb-4 md:pb-5'
+        }`}
+      >
 
         {/* Galeria */}
         <motion.div
@@ -39,7 +43,7 @@ export function HmCloneAuthority({ onScrollToCapture, showCta = true }) {
                 <img
                   src={AUTHORITY_COLLAGE_SRC[0]}
                   alt=""
-                  className="hm-authority-collage-img"
+                  className="hm-authority-collage-img hm-authority-collage-img--focus-upper"
                   loading="lazy"
                   decoding="async"
                 />
@@ -48,7 +52,7 @@ export function HmCloneAuthority({ onScrollToCapture, showCta = true }) {
                 <img
                   src={AUTHORITY_COLLAGE_SRC[1]}
                   alt=""
-                  className="hm-authority-collage-img"
+                  className="hm-authority-collage-img hm-authority-collage-img--focus-upper"
                   loading="lazy"
                   decoding="async"
                 />
@@ -59,7 +63,7 @@ export function HmCloneAuthority({ onScrollToCapture, showCta = true }) {
                 <img
                   src={AUTHORITY_COLLAGE_SRC[2]}
                   alt=""
-                  className="hm-authority-collage-img"
+                  className="hm-authority-collage-img hm-authority-collage-img--focus-fullbody"
                   loading="lazy"
                   decoding="async"
                 />
@@ -97,15 +101,11 @@ export function HmCloneAuthority({ onScrollToCapture, showCta = true }) {
           vibrar em outro patamar.
         </motion.p>
 
-        <motion.p className="hm-authority-bio" style={{ marginTop: '1.25rem' }} {...inView(0.19)}>
-          Nesse encontro você terá o Samuel frente a frente e poderá tirar dúvidas diretamente com ele.
-        </motion.p>
-
-        {/* CTA */}
+        {/* CTA — logo abaixo da bio */}
         {showCta ? (
           <motion.div
-            className="mt-10 flex justify-center sm:mt-12"
-            {...inView(0.28)}
+            className="mt-6 flex justify-center sm:mt-7"
+            {...inView(0.2)}
           >
             <button
               type="button"
@@ -118,8 +118,6 @@ export function HmCloneAuthority({ onScrollToCapture, showCta = true }) {
           </motion.div>
         ) : null}
       </div>
-
-      <HmCloneWaveDivider flip />
     </section>
   )
 }

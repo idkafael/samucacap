@@ -26,7 +26,6 @@ export default function EventLpPage() {
       heroHeadline={isLp ? lpHeroHeadline : rootHeroHeadline}
       heroSubheadline={isLp ? lpHeroSubheadline : rootHeroSubheadline}
       heroFormSubmitLabel={isLp ? 'QUERO PARTICIPAR DO EVENTO' : 'ENTRAR NO GRUPO DO CAFÉ COM FREQUÊNCIA'}
-      heroShowCalendar={isLp ? false : undefined}
       heroHideLogo={true}
       heroHighlightCard={true}
       heroCenterCard={isLp}

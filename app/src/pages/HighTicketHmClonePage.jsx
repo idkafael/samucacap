@@ -35,7 +35,6 @@ function scrollToHeroCapture() {
  *   heroSubheadline?: string;
  *   heroFormSubmitLabel?: string;
  *   heroMicrocopy?: string;
- *   heroShowCalendar?: boolean;
  *   heroHideLogo?: boolean;
  *   heroHighlightCard?: boolean;
  *   heroCenterCard?: boolean;
@@ -50,7 +49,6 @@ export default function HighTicketHmClonePage({
   heroSubheadline,
   heroFormSubmitLabel,
   heroMicrocopy,
-  heroShowCalendar,
   heroHideLogo,
   heroHighlightCard,
   heroCenterCard,
@@ -70,7 +68,6 @@ export default function HighTicketHmClonePage({
         subheadline={heroSubheadline}
         formSubmitLabel={heroFormSubmitLabel}
         microcopy={heroMicrocopy}
-        showCalendar={heroShowCalendar}
         hideLogo={heroHideLogo}
         hideLogoText={heroHideLogo}
         highlightCard={heroHighlightCard}

@@ -11,14 +11,6 @@ const BULLETS = [
   'Como escalar com múltiplos funis rodando simultaneamente',
 ]
 
-function IconCalendar({ className }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-      <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a2 2 0 0 1 2 2v2H3V6a2 2 0 0 1 2-2h1V3a1 1 0 0 1 1-1zm13 8H4v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10z" />
-    </svg>
-  )
-}
-
 /**
  * @param {{
  *   onSubmitLead: (data: { email: string, whatsapp: string }) => Promise<{ ok?: boolean, error?: string }>
@@ -29,7 +21,6 @@ function IconCalendar({ className }) {
  *   highlightCard?: boolean
  *   hideLogo?: boolean
  *   microcopy?: string
- *   showCalendar?: boolean
  *   centerCard?: boolean
  * }} props
  */
@@ -42,7 +33,6 @@ export function HmCloneHero({
   highlightCard = false,
   hideLogo = false,
   microcopy,
-  showCalendar = true,
   centerCard = false,
 }) {
   return (
@@ -121,20 +111,6 @@ export function HmCloneHero({
             <p className="mt-4 text-center text-[0.85rem] font-semibold leading-snug text-[var(--hm-hero-copy)] sm:mt-5 sm:text-sm lg:text-left">
               {microcopy}
             </p>
-          ) : null}
-
-          {showCalendar ? (
-            <div className="mt-5 flex flex-col items-center gap-2 sm:mt-6 lg:items-start">
-              <div className="flex items-center gap-2.5 rounded-full border border-[var(--hm-hero-orange)]/30 bg-[var(--hm-hero-orange)]/10 px-4 py-2">
-                <IconCalendar className="h-4 w-4 shrink-0 text-[var(--hm-hero-orange)]" aria-hidden />
-                <p className="m-0 text-[0.82rem] font-bold uppercase leading-none tracking-wide text-[var(--hm-hero-heading)]">
-                  A partir do dia <span className="text-[var(--hm-hero-orange)]">16 de Abril</span>
-                </p>
-              </div>
-              <p className="m-0 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[var(--hm-hero-copy)]/60">
-                De segunda a sexta · ao vivo no Instagram
-              </p>
-            </div>
           ) : null}
         </div>
         </div>

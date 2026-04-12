@@ -1,6 +1,6 @@
 export function HmCloneFooter() {
   return (
-    <footer className="bg-[#020202] px-4 pb-12 pt-6 sm:px-6 sm:pb-14">
+    <footer className="bg-[#020202] px-4 pb-10 pt-4 sm:px-6 sm:pb-12">
       <div className="mx-auto max-w-4xl">
         <div className="hm-footer-divider" aria-hidden="true" />
         <p className="hm-footer-copy">

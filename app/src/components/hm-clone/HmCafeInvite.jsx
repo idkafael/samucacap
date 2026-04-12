@@ -19,7 +19,7 @@ const itemVariants = {
 
 export function HmCafeInvite() {
   return (
-    <section className="hm-cafe-invite bg-[#020202] px-5 pb-20 pt-2 sm:px-6 sm:pb-24 sm:pt-4 md:pb-28">
+    <section className="hm-cafe-invite bg-[#020202] px-5 pb-10 pt-2 sm:px-6 sm:pb-12 sm:pt-4 md:pb-14">
       <div className="mx-auto max-w-xl sm:max-w-2xl">
 
         <p className="hm-section-kicker">O QUE VOCÊ RECEBE</p>
