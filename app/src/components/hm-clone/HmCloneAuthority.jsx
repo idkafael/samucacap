@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { HmCloneWaveDivider } from './HmCloneWaveDivider'
+import { CafeIcon } from './CafeIcon'
 
 /**
  * Collage (mesma ordem do layout):
@@ -23,7 +24,8 @@ const inView = (delay = 0) => ({
 /** @param {{ onScrollToCapture: () => void; showCta?: boolean }} props */
 export function HmCloneAuthority({ onScrollToCapture, showCta = true }) {
   return (
-    <section className="bg-[#020202]">
+    <section className="relative bg-[#020202] overflow-hidden">
+      <CafeIcon className="hm-wm hm-wm--mid-r" />
       <HmCloneWaveDivider />
 
       <div className="mx-auto max-w-3xl px-4 pt-4 sm:px-6 md:pt-6 pb-3 sm:pb-4 md:pb-5">
@@ -98,10 +100,9 @@ export function HmCloneAuthority({ onScrollToCapture, showCta = true }) {
 
         {/* Bio */}
         <motion.p className="hm-authority-bio" {...inView(0.15)}>
-          Samuel Souza, o Samuca, é mentor e estrategista com quase duas décadas ajudando empresários e equipes
-          a alinhar propósito, liderança e performance. Ele acredita que o CNPJ espelha a frequência do CPF:
-          quando o líder eleva consciência, corpo e mentalidade, o negócio deixa de reagir ao caos e passa a
-          vibrar em outro patamar.
+          Samuel Souza, o Samuca, é mentor, advisor, escritor bestseller e fundador do Grupo Alta Frequência, um
+          ecossistema de mentorias, treinamentos e gestão que já impactou mais de mil empresas e mais de cem mil
+          pessoas.
         </motion.p>
 
         {/* CTA — logo abaixo da bio */}
