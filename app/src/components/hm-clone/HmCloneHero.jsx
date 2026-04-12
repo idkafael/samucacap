@@ -2,8 +2,8 @@ import { HmCloneHeroCaptureForm } from './HmCloneHeroCaptureForm'
 import { HmCloneLogoMark } from './HmCloneLogoMark'
 import { IconCheckCircle } from './IconCheckCircle'
 
-const HERO_BG = '/images/aceleracao-hero-desktop.png'
-const HERO_BG_MOBILE = '/images/mobile.png'
+const HERO_BG = 'https://i.imgur.com/nW4ciZm.jpg'
+const HERO_BG_MOBILE = HERO_BG
 
 const BULLETS = [
   'Funis de CAC zero',
@@ -60,7 +60,7 @@ export function HmCloneHero({
         <img
           src={HERO_BG_MOBILE}
           alt=""
-          className="absolute inset-0 h-full w-full object-cover object-top"
+          className="absolute left-0 top-[-45px] h-[calc(100%+45px)] w-full object-cover object-top"
           decoding="async"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/30 to-black" />
@@ -125,7 +125,7 @@ export function HmCloneHero({
               <div className="flex items-center gap-2.5 rounded-full border border-[var(--hm-hero-orange)]/30 bg-[var(--hm-hero-orange)]/10 px-4 py-2">
                 <IconCalendar className="h-4 w-4 shrink-0 text-[var(--hm-hero-orange)]" aria-hidden />
                 <p className="m-0 text-[0.82rem] font-bold uppercase leading-none tracking-wide text-[var(--hm-hero-heading)]">
-                  A partir do dia <span className="text-[var(--hm-hero-orange)]">16 de Abril</span> às <span className="text-[var(--hm-hero-orange)]">06h37</span>
+                  A partir do dia <span className="text-[var(--hm-hero-orange)]">16 de Abril</span>
                 </p>
               </div>
               <p className="m-0 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[var(--hm-hero-copy)]/60">
