@@ -2,8 +2,8 @@ import { HmCloneHeroCaptureForm } from './HmCloneHeroCaptureForm'
 import { HmCloneLogoMark } from './HmCloneLogoMark'
 import { IconCheckCircle } from './IconCheckCircle'
 
-const HERO_BG = '/images/aceleracao-hero-desktop.png'
-const HERO_BG_MOBILE = '/images/mobile.png'
+const HERO_BG = 'https://i.imgur.com/stLK6HN.jpg'
+const HERO_BG_MOBILE = 'https://i.imgur.com/stLK6HN.jpg'
 
 const BULLETS = [
   'Funis de CAC zero',
@@ -56,7 +56,7 @@ export function HmCloneHero({
       <div className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-black via-black/80 to-transparent lg:block lg:via-black/55 xl:via-black/35" />
 
       {/* Mobile: topo da imagem alinhado ao topo do site; cover corta de baixo, não da cabeça */}
-      <div className="relative z-0 h-[min(44vh,360px)] w-full overflow-hidden sm:h-[min(40vh,340px)] lg:hidden">
+      <div className="relative z-0 h-[min(44vh,400px)] w-full overflow-hidden sm:h-[min(40vh,340px)] lg:hidden">
         <img
           src={HERO_BG_MOBILE}
           alt=""
@@ -66,7 +66,7 @@ export function HmCloneHero({
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/30 to-black" />
       </div>
 
-      <div className="hm-hero-content-wrap relative z-10 w-full">
+      <div className="hm-hero-content-wrap relative z-10 w-full -mt-[50px] lg:mt-0">
         <div
           className={`mx-auto flex w-full max-w-7xl flex-col px-4 pb-14 pt-0 sm:px-6 sm:pb-16 sm:pt-0 lg:min-h-[min(100svh,56rem)] lg:px-10 lg:pb-20 lg:pt-14 ${
             centerCard ? 'items-center lg:items-start' : 'lg:flex-row lg:items-start'
@@ -83,7 +83,7 @@ export function HmCloneHero({
             </div>
           )}
 
-          <h1 className="hm-hero-h1 m-0 text-center text-[1.7rem] font-bold leading-[1.18] tracking-[-0.02em] text-[var(--hm-hero-heading)] sm:text-[2.1rem] sm:leading-[1.15] lg:text-left lg:text-[2.4rem] lg:leading-[1.18]">
+          <h1 className="hm-hero-h1 m-0 text-center text-[1.75rem] text-[var(--hm-hero-heading)] sm:text-[2.2rem] lg:text-left lg:text-[2.6rem]">
             {headline ?? (
               <>
                 Acesse os funis que te farão escalar para{' '}

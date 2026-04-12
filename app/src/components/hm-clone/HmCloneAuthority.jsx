@@ -1,12 +1,6 @@
 import { motion } from 'framer-motion'
 import { HmCloneWaveDivider } from './HmCloneWaveDivider'
 
-const STATS = [
-  { value: '+100mil', label: 'pessoas impactadas' },
-  { value: '+1.000', label: 'empresas acompanhadas' },
-  { value: '18 anos', label: 'de metodologia' },
-]
-
 const inView = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
@@ -61,22 +55,6 @@ export function HmCloneAuthority({ onScrollToCapture, showCta = true }) {
         <motion.p className="hm-authority-bio" style={{ marginTop: '1.25rem' }} {...inView(0.19)}>
           Nesse encontro você terá o Samuel frente a frente e poderá tirar dúvidas diretamente com ele.
         </motion.p>
-
-        {/* Stats */}
-        <motion.div
-          className="hm-authority-stats"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.23, ease: [0.16, 1, 0.3, 1] }}
-        >
-          {STATS.map(({ value, label }) => (
-            <div key={label} className="hm-authority-stat">
-              <span className="hm-authority-stat-value">{value}</span>
-              <span className="hm-authority-stat-label">{label}</span>
-            </div>
-          ))}
-        </motion.div>
 
         {/* CTA */}
         {showCta ? (

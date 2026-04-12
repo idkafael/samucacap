@@ -12,7 +12,7 @@ export default function EventLpPage() {
   // Raiz `/` mantém o estado atual; `/lp` muda apenas o Hero (primeira dobra).
   const rootHeroHeadline = 'COMECE SEU DIA COM CLAREZA, DIREÇÃO E PODER DE FREQUÊNCIA'
   const rootHeroSubheadline =
-    'Todos os dias, ao vivo pela manhã, você vai entender por que está travado mesmo tentando… e como desenvolver o nível de frequência e consciência necessário para finalmente crescer na vida pessoal e profissional.'
+    'Todos os dias, ao vivo pela manhã, você vai entender por que está travado mesmo tentando…'
 
   const lpHeroHeadline = 'O FIM DO REALIZADOR FRUSTRADO'
   const lpHeroSubheadline =

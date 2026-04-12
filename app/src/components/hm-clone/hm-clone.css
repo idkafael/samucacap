@@ -28,9 +28,13 @@
   --hm-hero-success-border: rgb(232 144 58 / 0.45);
 }
 
-/* Headline e subheadline do hero — Barlow, legível e clean */
+/* Headline e subheadline do hero — Barlow Condensed, clean e impactante */
 .hm-hero-section .hm-hero-h1 {
-  font-family: "Barlow", ui-sans-serif, sans-serif;
+  font-family: "Barlow Condensed", "Barlow", ui-sans-serif, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  line-height: 1.08;
   -webkit-font-smoothing: antialiased;
   text-wrap: balance;
 }
@@ -81,34 +85,37 @@
 ═══════════════════════════════════════ */
 .hm-clone-root .hm-clone-btn-cta {
   position: relative;
-  background: linear-gradient(135deg, #c87028 0%, #f0a050 100%);
+  background: rgb(10 10 10 / 0.72);
+  border: 1px solid rgb(201 168 76 / 0.55) !important;
+  border-radius: 999px !important;
+  color: #f5f0e8;
+  letter-spacing: 0.06em;
+  font-family: "Barlow Condensed", "Barlow", ui-sans-serif, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
   box-shadow:
-    0 4px 22px rgb(200 112 40 / 0.48),
-    0 0 0 1px rgb(255 255 255 / 0.14) inset,
-    inset 0 1px 0 rgb(255 255 255 / 0.32);
+    0 0 0 1px rgb(201 168 76 / 0.12),
+    inset 0 1px 0 rgb(255 255 255 / 0.04);
   transition:
-    transform 0.22s ease,
-    box-shadow 0.3s ease,
-    filter 0.22s ease;
+    transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    background 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .hm-clone-root .hm-clone-btn-cta:hover {
-  transform: translateY(-2px) scale(1.02);
-  filter: brightness(1.08) saturate(1.06);
+  transform: translateY(-2px);
+  background: rgb(201 168 76 / 0.1);
+  border-color: rgb(201 168 76 / 0.9) !important;
   box-shadow:
-    0 10px 36px rgb(232 144 58 / 0.58),
-    0 0 52px rgb(240 160 80 / 0.38),
-    0 0 0 1px rgb(255 255 255 / 0.22) inset,
-    inset 0 1px 0 rgb(255 255 255 / 0.42);
+    0 0 28px rgb(201 168 76 / 0.18),
+    0 8px 24px rgb(0 0 0 / 0.4);
 }
 
 .hm-clone-root .hm-clone-btn-cta:active {
-  transform: translateY(0) scale(0.99);
-  filter: brightness(0.94);
-  box-shadow:
-    0 2px 14px rgb(200 112 40 / 0.42),
-    inset 0 2px 8px rgb(0 0 0 / 0.18),
-    inset 0 1px 0 rgb(255 255 255 / 0.18);
+  transform: translateY(0) scale(0.98);
+  background: rgb(201 168 76 / 0.06);
+  box-shadow: none;
 }
 
 /* ═══════════════════════════════════════
