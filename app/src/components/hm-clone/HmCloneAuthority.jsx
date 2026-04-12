@@ -1,7 +1,11 @@
 import { motion } from 'framer-motion'
 import { HmCloneWaveDivider } from './HmCloneWaveDivider'
 
-/** Ordem: esq. cima → esq. baixo → dir. cima → dir. baixo */
+/**
+ * Collage (mesma ordem do layout):
+ * [0] esq. cima 4/3 — icon | [1] esq. baixo 4/3 — jXIljsi
+ * [2] dir. cima 5/3 — NdEW5op | [3] dir. baixo tall — ALOQJlA
+ */
 const AUTHORITY_COLLAGE_SRC = [
   '/images/icon.jpg',
   'https://i.imgur.com/jXIljsi.jpg',
@@ -22,11 +26,7 @@ export function HmCloneAuthority({ onScrollToCapture, showCta = true }) {
     <section className="bg-[#020202]">
       <HmCloneWaveDivider />
 
-      <div
-        className={`mx-auto max-w-3xl px-4 pt-4 sm:px-6 md:pt-6 ${
-          showCta ? 'pb-6 sm:pb-7 md:pb-8' : 'pb-3 sm:pb-4 md:pb-5'
-        }`}
-      >
+      <div className="mx-auto max-w-3xl px-4 pt-4 sm:px-6 md:pt-6 pb-3 sm:pb-4 md:pb-5">
 
         {/* Galeria */}
         <motion.div
@@ -38,8 +38,9 @@ export function HmCloneAuthority({ onScrollToCapture, showCta = true }) {
             role="group"
             aria-label="Fotos de Samuel Souza"
           >
+            {/* Coluna esquerda: portrait (cima) + landscape (baixo) */}
             <div className="hm-authority-collage-col">
-              <div className="hm-authority-collage-slot aspect-[4/3] shrink-0">
+              <div className="hm-authority-collage-slot hm-authority-collage-slot--portrait">
                 <img
                   src={AUTHORITY_COLLAGE_SRC[0]}
                   alt=""
@@ -48,18 +49,20 @@ export function HmCloneAuthority({ onScrollToCapture, showCta = true }) {
                   decoding="async"
                 />
               </div>
-              <div className="hm-authority-collage-slot aspect-[4/3] shrink-0">
+              <div className="hm-authority-collage-slot hm-authority-collage-slot--landscape">
                 <img
                   src={AUTHORITY_COLLAGE_SRC[1]}
                   alt=""
-                  className="hm-authority-collage-img hm-authority-collage-img--focus-upper"
+                  className="hm-authority-collage-img hm-authority-collage-img--focus-upper hm-authority-collage-img--zoom-landscape-esq"
                   loading="lazy"
                   decoding="async"
                 />
               </div>
             </div>
+
+            {/* Coluna direita: landscape (cima) + portrait (baixo) */}
             <div className="hm-authority-collage-col">
-              <div className="hm-authority-collage-slot aspect-[5/3] shrink-0">
+              <div className="hm-authority-collage-slot hm-authority-collage-slot--landscape">
                 <img
                   src={AUTHORITY_COLLAGE_SRC[2]}
                   alt=""
@@ -68,7 +71,7 @@ export function HmCloneAuthority({ onScrollToCapture, showCta = true }) {
                   decoding="async"
                 />
               </div>
-              <div className="hm-authority-collage-slot hm-authority-collage-slot--tall min-h-0 flex-1">
+              <div className="hm-authority-collage-slot hm-authority-collage-slot--portrait">
                 <img
                   src={AUTHORITY_COLLAGE_SRC[3]}
                   alt=""
@@ -104,7 +107,7 @@ export function HmCloneAuthority({ onScrollToCapture, showCta = true }) {
         {/* CTA — logo abaixo da bio */}
         {showCta ? (
           <motion.div
-            className="mt-6 flex justify-center sm:mt-7"
+            className="mt-6 flex justify-center pb-6 sm:mt-7 sm:pb-8 md:pb-10"
             {...inView(0.2)}
           >
             <button
