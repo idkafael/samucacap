@@ -49,17 +49,18 @@ export function HmCloneHero({
       <div className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-black via-black/70 to-transparent lg:block lg:via-black/45 xl:via-black/28" />
 
       {/* Mobile: topo da imagem alinhado ao topo do site; cover corta de baixo, não da cabeça */}
-      <div className="relative z-0 h-[min(44vh,400px)] w-full overflow-hidden sm:h-[min(40vh,340px)] lg:hidden">
+      <div className="relative z-0 h-[min(48vh,420px)] w-full overflow-hidden sm:h-[min(44vh,380px)] lg:hidden">
         <img
           src={HERO_BG_MOBILE}
           alt=""
           className="absolute left-0 top-[-45px] h-[calc(100%+45px)] w-full object-cover object-top"
           decoding="async"
         />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/5 via-black/30 to-black" />
+        {/* Gradiente duplo: fade suave no topo, dissolve totalmente para preto nos 40% finais */}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black" style={{ backgroundImage: 'linear-gradient(to bottom, rgb(0 0 0 / 0.08) 0%, rgb(0 0 0 / 0.18) 40%, rgb(0 0 0 / 0.72) 72%, rgb(0 0 0 / 1) 100%)' }} />
       </div>
 
-      <div className="hm-hero-content-wrap relative z-10 w-full -mt-[50px] lg:mt-0">
+      <div className="hm-hero-content-wrap relative z-10 w-full -mt-[110px] lg:mt-0">
         <div
           className={`mx-auto flex w-full max-w-7xl flex-col px-4 pb-14 pt-0 sm:px-6 sm:pb-16 sm:pt-0 lg:min-h-[min(100svh,56rem)] lg:px-10 lg:pb-16 lg:pt-10 ${
             centerCard ? 'items-center lg:items-center' : 'lg:flex-row lg:items-center'
