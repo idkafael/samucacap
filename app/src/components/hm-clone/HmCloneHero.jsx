@@ -4,7 +4,7 @@ import { IconCheckCircle } from './IconCheckCircle'
 import { CafeIcon } from './CafeIcon'
 
 const HERO_BG = 'https://i.imgur.com/UACNYcH.jpg'
-const HERO_BG_MOBILE = 'https://i.imgur.com/nvI1WIr.jpg'
+const HERO_BG_MOBILE = 'https://i.imgur.com/rRDGdrW.jpg'
 
 const BULLETS = [
   'Funis de CAC zero',
