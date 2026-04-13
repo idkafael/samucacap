@@ -100,7 +100,7 @@ export function HmCloneAuthority({ onScrollToCapture, showCta = true }) {
 
         {/* Bio */}
         <motion.p className="hm-authority-bio" {...inView(0.15)}>
-          Samuel Souza, o Samuca, é mentor, advisor, escritor bestseller e fundador do Grupo Alta Frequência, um
+          Samuel Souza é mentor, advisor, escritor bestseller e fundador do Grupo Alta Frequência, um
           ecossistema de mentorias, treinamentos e gestão que já impactou mais de mil empresas e mais de cem mil
           pessoas.
         </motion.p>
