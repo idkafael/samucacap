@@ -57,7 +57,7 @@ export function HmCloneHero({
         <img
           src={HERO_BG_MOBILE}
           alt=""
-          className="absolute left-0 top-[-45px] h-[calc(100%+45px)] w-full object-cover object-top"
+          className="absolute left-0 top-[-28px] h-[calc(100%+28px)] w-full object-cover object-top"
           decoding="async"
         />
         {/* Gradiente duplo: fade suave no topo, dissolve totalmente para preto nos 40% finais */}
